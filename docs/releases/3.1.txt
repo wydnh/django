@@ -263,6 +263,9 @@ Miscellaneous
   ``ETag`` header to responses with an empty
   :attr:`~django.http.HttpResponse.content`.
 
+* ``django.utils.decorators.classproperty()`` decorator is moved to
+  ``django.utils.functional.classproperty()``.
+
 .. _deprecated-features-3.1:
 
 Features deprecated in 3.1
@@ -273,6 +276,9 @@ Miscellaneous
 
 * ``PASSWORD_RESET_TIMEOUT_DAYS`` setting is deprecated in favor of
   :setting:`PASSWORD_RESET_TIMEOUT`.
+
+* The undocumented usage of the :lookup:`isnull` lookup with non-boolean values
+  as the right-hand side is deprecated, use ``True`` or ``False`` instead.
 
 .. _removed-features-3.1:
 

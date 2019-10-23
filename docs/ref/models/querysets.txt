@@ -126,7 +126,7 @@ described here.
 
 Here's the formal declaration of a ``QuerySet``:
 
-.. class:: QuerySet(model=None, query=None, using=None)
+.. class:: QuerySet(model=None, query=None, using=None, hints=None)
 
     Usually when you'll interact with a ``QuerySet`` you'll use it by
     :ref:`chaining filters <chaining-filters>`. To make this work, most
@@ -3280,6 +3280,11 @@ SQL equivalent:
 .. code-block:: sql
 
     SELECT ... WHERE pub_date IS NULL;
+
+.. deprecated:: 3.1
+
+    Using non-boolean values as the right-hand side is deprecated, use ``True``
+    or ``False`` instead. In Django 4.0, the exception will be raised.
 
 .. fieldlookup:: regex
 
